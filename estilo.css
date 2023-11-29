@@ -1,0 +1,259 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-color: #e3c4a8;
+  font-family: "Rye", cursive;
+  color: #33313b;
+  text-shadow: 2px 2px 8px #f6f5f5;
+}
+
+.container {
+  width: 1200px;
+  height: 767px;
+  overflow: hidden;
+  display: flex;
+  position: relative;
+}
+
+.container::after {
+  content: "";
+  background: url("fundo.jpg");
+  background-size: 100%;
+  opacity: 0.5;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+  filter: blur(1px);
+}
+
+.principal {
+  display: flex;
+  flex-direction: column;
+}
+
+.mensagem {
+  flex: 1;
+  background-color: #f6f5f555;
+  margin: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  font-size: 35px;
+  text-align: center;
+  /* display: none; */
+}
+
+.mensagem-vitoria {
+  background-color: #b1f1c155;
+}
+
+.mensagem-derrota {
+  background-color: #f1b1b155;
+}
+
+.mensagem .reiniciar {
+  margin-top: 20px;
+  padding: 20px;
+  font-size: 25px;
+}
+
+.forca {
+  width: 500px;
+  margin-top: 45px;
+  margin-left: -80px;
+}
+
+.imagem-forca {
+  width: 100%;
+}
+
+.conteudo {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  font-size: 90px;
+  text-align: center;
+  padding: 30px;
+}
+
+.area-util {
+  flex: 1;
+  display: flex;
+}
+
+.area-util > * {
+  flex: 1;
+}
+
+#inicial {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  display: none;
+  background-color: #f6f5f555;
+  margin: 20px;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+h2 {
+  font-size: 50px;
+  text-align: center;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.dificuldade-acoes, .cadastro-acoes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dificuldade-acoes > *, .cadastro-acoes > * {
+  width: 60%;
+}
+
+button {
+  background-color: #4592af;
+  color: #33313b;
+  text-shadow: 2px 2px 8px #f6f5f5, -2px -2px 8px #f6f5f5, 02px 2px 8px #f6f5f5,
+    2px -2px 8px #f6f5f5;
+  font-family: "Rye", cursive;
+  border-radius: 10px;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  box-shadow: 0 0 8px #4592af;
+}
+
+button:hover {
+  background-color: #295869;
+}
+
+.dificuldade-acoes button, .cadastro-acoes button {
+  padding: 20px;
+  margin: 10px;
+  font-size: 30px;
+}
+
+.cadastro-acoes button {
+  font-size: 24px;
+}
+
+#jogo {
+  display: flex;
+  flex-direction: column;
+  /* display: none; */
+}
+
+#jogo > * {
+  flex: 1;
+  background-color: #f6f5f555;
+  margin: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.teclado button {
+  margin: 5px;
+  font-size: 40px;
+  width: 70px;
+  height: 70px;
+}
+
+.resposta {
+  flex-direction: column;
+}
+
+.dica {
+  padding-bottom: 1rem;
+}
+
+.palavra {
+  display: flex;
+  align-items: flex-end;
+}
+
+.palavra > * {
+  margin: 0 5px;
+  font-size: 70px;
+  text-align: center;
+  height: 70px;
+  border-bottom: 5px solid #232229;
+  width: 70px;
+}
+
+.certo {
+  background-color: #4eaf45;
+  box-shadow: 0 0 8px #4eaf45;
+}
+
+.errado {
+  background-color: #af4545;
+  box-shadow: 0 0 8px #af4545;
+}
+
+.escondido {
+  display: none;
+}
+
+#cadastro {
+  display: flex;
+  flex-direction: column;
+  background-color: #f6f5f555;
+  margin: 20px;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.dificuldade-opcoes {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.dificuldade-opcoes .opcao {
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
+.campo {
+  text-align: center;
+}
+
+.campo input {
+  font-family: "Rye", cursive;
+  width: 60%;
+  padding: 10px;
+  margin: 10px;
+  font-size: 26px;
+}
